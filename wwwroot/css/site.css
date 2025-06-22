@@ -1,0 +1,376 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 84px;
+}
+
+
+.fa {
+    width: 30px;
+    height: 30px;
+    padding: 7.5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-youtube {
+    background: #FF0000;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0e76a8;
+    color: white;
+}
+
+.fa-google {
+    background: #db4a39;
+    color: white;
+}
+
+.rowUl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rowLI {
+    height: 40px;
+    width: 24vw;
+    margin: auto;
+    padding: auto;
+    border: 0;
+    float: left;
+}
+
+#underBar {
+    text-decoration: none;
+}
+
+footer {
+    color: #e8eaed;
+    background-color: #222222;
+}
+
+
+#background0 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    color: #f8f6b0;
+    z-index: -2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.4)), url("../images/ai.jpg");
+}
+
+/*.background1 {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    color: #f8f6b0;
+   
+}*/
+
+@media (min-width: 768px) {
+    .background1 {
+        background-image: url('../images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        color: #f8f6b0;
+    }
+}
+
+@media (max-width: 768px) {
+    .background1 {
+        background-image: url('../images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        color: #f8f6b0;
+        width: 100vw;
+        height: 100vh;
+    }
+    }
+
+
+#background2 {
+    background-image: url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    color: #F7F8E0;
+    padding: 0% 8% 0% 8%;
+    width: 100vw;
+    height: 100vh;
+}
+
+    #makeTitleDark {
+        width: 100%;
+        height: 50vw;
+        position: absolute;
+        z-index: -1;
+        background-color: rgba(1,1,1,0.4);
+    }
+
+    #homeHeader {
+        font-family: 'Anton', sans-serif;
+        background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: brown;
+        padding: 20% 5% 0% 5%;
+        text-align: center;
+        font-size: 9vw;
+    }
+
+    #homeSubHeader {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8vw;
+        text-align: center;
+        padding: 0% 10% 0% 10%;
+        color: #f8f6b0;
+    }
+
+    #homeSecondHeader {
+        font-family: 'Anton', sans-serif;
+        color: #f8f6b0;
+        text-shadow: 4px 4px 2px navy, 4px 4px 8px white;
+        padding: 10% 5% 10% 5%;
+        text-align: center;
+        font-size: 6vw;
+    }
+
+    #listOfCompanies {
+        font-family: 'Anton', sans-serif;
+        color: #f8f6b0;
+        padding: 5% 5% 5% 5%;
+        text-align: center;
+        font-size: 6vw;
+    }
+
+    #whiteButtonStyle {
+        background-color: white;
+    }
+
+    #whiteButtonText {
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+    hr {
+        height: 2px;
+        color: #f8f6b0;
+        opacity: 1;
+        margin-top: 16px;
+    }
+
+    table {
+        border: 1px solid black;
+    }
+
+
+    thead {
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: #0404B4;
+        color: yellow;
+        border-bottom: 1px solid yellow;
+        text-align: center;
+    }
+
+    td {
+        background-color: white;
+        color: darkblue;
+        border: 1px solid black;
+    }
+
+    #detailPageTitles {
+        font-family: 'Anton', sans-serif;
+        color: #f8f6b0;
+        font-size: 2vw;
+    }
+
+    #deletePageQuestion {
+        font-family: 'Anton', sans-serif;
+        color: red;
+        text-shadow: 1px 1px white;
+        font-size: 3.2vw;
+    }
+
+    #home12PicFig {
+        position: relative;
+    }
+
+
+    @media (min-width: 992px) { /* Large laptop/desktop */
+        #home12PicFigCap {
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            padding-bottom: 12px;
+            position: absolute;
+            background: linear-gradient(to right, gray, white, gray);
+            visibility: visible;
+            text-align: center;
+            text-shadow: 2px 2px 0px white, 2px 2px 3px navy;
+            color: navy;
+            transition: 2s ease;
+            opacity: 1;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.7vw;
+            padding-top: 15%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) { /* Laptop/desktop */
+        #home12PicFigCap {
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            position: absolute;
+            background: linear-gradient(to right, gray, white, gray);
+            visibility: visible;
+            text-align: center;
+            text-shadow: 2px 2px 0px white, 2px 2px 3px navy;
+            color: navy;
+            transition: 2s ease;
+            opacity: 1;
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5vw;
+            padding-top: 15%;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) { /* Tablet */
+        #home12PicFigCap {
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            position: absolute;
+            background: linear-gradient(to right, gray, white, gray);
+            visibility: visible;
+            text-align: center;
+            text-shadow: 2px 2px 0px white, 2px 2px 3px navy;
+            color: navy;
+            transition: 2s ease;
+            opacity: 1;
+            font-family: 'Arial', sans-serif;
+            font-size: 3.3vw;
+            padding-top: 15%;
+        }
+    }
+
+    @media (max-width: 576px) { /* Mobile phone */
+        #home12PicFigCap {
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            position: absolute;
+            background: linear-gradient(to right, gray, white, gray);
+            visibility: visible;
+            text-align: center;
+            text-shadow: 2px 2px 0px white, 2px 2px 3px navy;
+            color: navy;
+            transition: 2s ease;
+            opacity: 1;
+            font-family: 'Arial', sans-serif;
+            font-size: 4.8vw;
+            padding-top: 15%;
+        }
+    }
+
+    #home12PicFig:hover > #home12PicFigCap {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #companySection1 {
+        background: linear-gradient(to bottom, #ff9933, #ffe6cc, white, white);
+        color: black;
+        padding: 30px 40px 10px 40px;
+    }
+
+    #companySection2 {
+        background: linear-gradient(to bottom, #3333ff, #ccccff, white, white);
+        color: black;
+        padding: 30px 40px 10px 40px;
+    }
+
+    @media (min-width: 768px) {
+        #companyHeadings {
+            text-shadow: 2px 2px 0px white, 2px 2px 4px navy;
+            font-family: "Oxygen", sans-serif;
+            text-align: center;
+            color: navy;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            font-size: 3vw;
+        }
+
+        #companyParagraph {
+            font-size: 1.5vw;
+        }
+    }
+
+    @media (max-width: 768px) { /* Tablet */
+        #companyHeadings {
+            text-shadow: 2px 2px 0px white, 2px 2px 4px navy;
+            font-family: "Oxygen", sans-serif;
+            text-align: center;
+            color: navy;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            font-size: 4vw;
+        }
+
+        #companyParagraph {
+            font-size: 2vw;
+        }
+    }
+
+    #noMarginPadding {
+        margin: 0px;
+        padding: 0px;
+    }

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WDP2022A2Mac.Models.Company>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<div class="row">
+<div style="padding:0; height:50vw;" id="background0">
+    <header id="homeHeader">Artificial Intelligence</header>
+    <p id="homeSubHeader">
+        Artificial Intelligence (AI) is intelligence demonstrated by machines,
+        as opposed to the natural intelligence displayed by animals
+        including humans. AI research has been defined as the field of
+        study of intelligent agents, which refers to any system that
+        perceives its environment and takes actions that maximize its
+        chance of achieving its goals (Wikipedia).
+    </p>
+</div>
+<div class="background1">
+    
+    <header id="homeSecondHeader">Top AI Companies</header>
+    <section class="row" style="padding:20px;">
+        @foreach (var item in Model)
+        {
+            @*<div class='col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6' style='padding-top: 0px;padding-bottom: 12px;'><a href="@Html.DisplayFor(modelItem => item.AnchorLink)"><figure id="home12PicFig"><img width="100%" height="100%" src="@Url.Action("images", "wwwroot", new{id= item.ImageFilename+".jpg"})"/></figure></a></div>*@
+            <div class='col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6' style='padding-top: 0px;padding-bottom: 12px;'><a href="@Html.Raw(item.AnchorLink)"><figure id="home12PicFig"><img width="100%" height="100%" src="@Html.Raw("../images/"+item.ImageFilename+".jpg")" /><figcaption id="home12PicFigCap">@Html.DisplayFor(modelItem => item.CompanyName)</figcaption></figure></a></div>
+        }
+    </section>
+       
+    </div>
+</div>

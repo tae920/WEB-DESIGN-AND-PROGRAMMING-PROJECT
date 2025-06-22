@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WDP2022A2Mac.Models.Company>
+@{
+    ViewData["Title"] = "Companies";
+}
+@*<h1>@ViewData["Title"]</h1>*@
+
+
+<div style="padding:0; height:50vw;" id="background0" class="row">
+    <header id="homeHeader">Top AI Companies</header>
+</div>
+<div>
+    <section class="row">
+        @{
+            int counter = 0;
+        }
+        @foreach (var item in Model)
+            {
+                if (counter % 2 == 0)
+                {
+                <section class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="noMarginPadding">
+                    <figure height="100%" id="noMarginPadding">
+                        <img id="@Html.DisplayFor(modelItem => item.ImageFilename)" width="100%" height="100%" src="@Html.Raw("/images/" + item.ImageFilename + ".jpg")" />
+                    </figure>
+                </section>
+                <section class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="companySection1">
+                    <header id="companyHeadings">@Html.DisplayFor(modelItem => item.CompanyName)</header>
+                    <p id="companyParagraph">
+                        @Html.DisplayFor(modelItem => item.Summary)
+                    </p>
+                    @{
+                        if(User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Companies" asp-action="IncreaseVote" asp-route-id="@item.Id" class="btn btn-primary">Vote(@Html.DisplayFor(modelItem => item.Like))</a>
+                        }
+                     }
+                    @{
+                    if (User.IsInRole("admin"))
+                    {
+                            <a asp-controller="Companies" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                    <a asp-controller="Companies" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    }
+                    }
+                    
+                </section>
+            }
+            else
+            {
+    <section class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="companySection2">
+        <header id="companyHeadings">@Html.DisplayFor(modelItem => item.CompanyName)</header>
+        <p id="companyParagraph">
+            @Html.DisplayFor(modelItem => item.Summary)
+        </p>
+        @{
+            if (User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Companies" asp-action="IncreaseVote" asp-route-id="@item.Id" class="btn btn-primary">Vote(@Html.DisplayFor(modelItem => item.Like))</a>
+            }
+        }
+        @{
+            if (User.IsInRole("admin"))
+            {
+                <a asp-controller="Companies" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                <a asp-controller="Companies" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+            }
+        }
+    </section>
+                <section class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="noMarginPadding">
+                    <figure height="100%" id="noMarginPadding">
+                        <img id="@Html.DisplayFor(modelItem => item.ImageFilename)" width="100%" height="100%" src="@Html.Raw("/images/" + item.ImageFilename + ".jpg")" />
+                    </figure>
+                </section>
+            }
+            counter++;
+        }
+    </section>
+</div>
